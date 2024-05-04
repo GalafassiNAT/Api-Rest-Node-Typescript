@@ -11,7 +11,7 @@ router.get("/", (_, res) => {
 	return res.send("Hello world!");
 });
 
-router.post("/", CitiesController.create);
+router.post("/cities", CitiesController.createValidation, CitiesController.create);
 
 
 
